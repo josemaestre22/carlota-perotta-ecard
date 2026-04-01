@@ -2,7 +2,11 @@
 import '../styles/global.css';
 
 import { Image } from 'astro:assets';
-import imagen1 from '../assets/Personal-Section-1.png';
+import imagen1 from '../assets/imagenCarla1.png';
+import imagen2 from '../assets/imagenCarla2.png';
+import iconSnowflake from '../assets/Snowflake.svg';
+import iconSparkle from '../assets/Sparkle.svg';
+import iconStar from '../assets/Star.svg';
 ---
 
 <html lang="es">
@@ -38,7 +42,7 @@ import imagen1 from '../assets/Personal-Section-1.png';
 				<!-- Contenedor Imagen + Badge (Pegados al texto sin superponerse) -->
 				<div class="relative flex flex-col items-center z-20 -mt-12 md:-mt-18">
 					<div class="w-[20.511rem] h-[26.209rem] md:w-[38.154rem] md:h-[48.753rem]">
-						<Image src={imagen1} alt="Carla Perrotta" class="w-full h-full object-cover"/>
+						<Image src={imagen1} alt="Carla Perrotta" loading="eager" class="w-full h-full object-cover"/>
 					</div>
 					<!-- Badge superpuesto a la base de la imagen -->
 					<span class="bg-primary text-white font-dmsans font-bold py-[0.59rem] px-[1.98rem] rounded-full text-[0.99rem] md:text-xl tracking-[0.099rem] md:tracking-[0.125rem] uppercase -mt-8 md:-mt-10 z-30 relative whitespace-nowrap">
@@ -62,7 +66,7 @@ import imagen1 from '../assets/Personal-Section-1.png';
 			</section>
 
 			<!-- Seccion de Cita Naranja -->
-			<section class="bg-primary pt-16 pb-[3.35rem] md:py-32 px-6 flex flex-col items-center justify-center text-center text-white">
+			<section class="bg-primary pt-16 pb-12 md:py-32 px-6 flex flex-col items-center justify-center text-center text-white">
 				<div class="max-w-[19.5rem] md:max-w-[55.75rem]">
 					<h2 class="font-playfair text-[1.886rem] md:text-[5.397rem] leading-[0.94] mb-3 md:mb-12 ">
 						La <span class="font-bold">terapia</span> no es para personas rotas, <br/>
@@ -74,6 +78,43 @@ import imagen1 from '../assets/Personal-Section-1.png';
 				</div>
 			</section>
 
+			<!-- Seccion de 3 Beneficios -->
+			<section class="bg-secondary-light overflow-hidden flex flex-col md:flex-row items-center justify-center pb-26 md:py-0 md:h-[42.9375rem]">
+				<!-- Imagen de Carla -->
+				<div class="w-full md:w-1/2 flex justify-center md:justify-end md:pr-12 -mt-5">
+					<div class="w-[27.4125rem] h-[41.11875rem] relative">
+						<Image src={imagen2} alt="Carla Perrotta" class="w-full h-full object-cover" />
+					</div>
+				</div>
+
+				<!-- Tarjetas de Beneficios -->
+				<div class="-mt-57 md:mt-0 flex flex-col gap-[1.51rem] md:gap-[2.125rem] px-6 md:px-0 md:w-1/2 md:items-start z-10">
+					<!-- Beneficio 1 -->
+					<div class="bg-primary rounded-[1.29rem] px-[1.25rem] py-2.5 md:p-[1.625rem] flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-[34.96rem]">
+						<Image src={iconSnowflake} alt="" class="w-8.5 h-8.5 md:w-12 md:h-12 shrink-0" />
+						<p class="text-white text-[1.11rem] md:text-[1.56rem] leading-[1.44] font-inter">
+							<span class="font-bold">Sanar no es olvidar lo que pasó.</span><br />
+							Es dejar de vivir atrapado en ello.
+						</p>
+					</div>
+
+					<!-- Beneficio 2 -->
+					<div class="bg-primary rounded-[1.29rem] px-[1.25rem] py-2.5 md:p-[1.625rem] flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-[34.96rem]">
+						<Image src={iconSparkle} alt="" class="w-8.5 h-8.5 md:w-12 md:h-12 shrink-0" />
+						<p class="text-white text-[1.11rem] md:text-[1.56rem] leading-[1.44] font-inter font-bold">
+							Entender lo que sientes cambia la forma en que te relacionas.
+						</p>
+					</div>
+
+					<!-- Beneficio 3 -->
+					<div class="bg-primary rounded-[1.29rem] px-[1.25rem] py-2.5 md:p-[1.625rem] flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-[34.96rem]">
+						<Image src={iconStar} alt="" class="w-8.5 h-8.5 md:w-12 md:h-12 shrink-0" />
+						<p class="text-white text-[1.11rem] md:text-[1.56rem] leading-[1.44] font-inter font-bold">
+							No todo lo que duele es debilidad. <span class="font-medium">A veces es historia no comprendida.</span>
+						</p>
+					</div>
+				</div>
+			</section>
 
 		</main>
 	</body>
