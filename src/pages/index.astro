@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+
+import { Image } from 'astro:assets';
+import imagen1 from '../assets/Personal-Section-1.png';
 ---
 
 <html lang="es">
@@ -19,12 +22,14 @@ import '../styles/global.css';
 	<body class="antialiased font-inter text-dark">
 		<!-- Aquí irá el desarrollo Mobile First -->
 		<header class="bg-primary h-[5.75rem] flex items-center justify-center px-4 top-0 z-50">
-			<p class="font-dmsans font-bold text-white text-base md:text-[1.5625rem] tracking-[0.16rem] leading-5.25   uppercase text-center max-w-[17.5rem] md:max-w-none">
+			<p class="font-dmsans font-bold text-white text-base md:text-[1.5625rem] tracking-[0.16rem] leading-5.25 uppercase text-center max-w-[17.5rem] md:max-w-none">
 				Sanar también es entender tu historia.
 			</p>
 		</header>
 		<main>
-			<section class="relative bg-secondary overflow-hidden -mt-[0.58rem] pt-7 pb-16 flex flex-col items-center">
+			
+			<!-- Seccion de Presentacion -->
+			<section class="relative bg-secondary overflow-hidden -mt-[0.58rem] pt-7 pb-13 flex flex-col items-center">
 				<!-- Nombre de impacto -->
 				<h1 class="font-playfair font-normal text-white text-[5.25rem] md:text-[14.75rem] leading-[0.77] text-center z-10 relative px-4">
 					Carla<br />Perrotta
@@ -33,11 +38,7 @@ import '../styles/global.css';
 				<!-- Contenedor Imagen + Badge (Pegados al texto sin superponerse) -->
 				<div class="relative flex flex-col items-center z-20 -mt-12 md:-mt-18">
 					<div class="w-[20.511rem] h-[26.209rem] md:w-[38.154rem] md:h-[48.753rem]">
-						<img 
-							src="https://www.figma.com/api/mcp/asset/6fa0f71c-df7b-4d85-809c-f644ddcba393" 
-							alt="Carla Perrotta" 
-							class="w-full h-full object-cover"
-						/>
+						<Image src={imagen1} alt="Carla Perrotta" class="w-full h-full object-cover"/>
 					</div>
 					<!-- Badge superpuesto a la base de la imagen -->
 					<span class="bg-primary text-white font-dmsans font-bold py-[0.59rem] px-[1.98rem] rounded-full text-[0.99rem] md:text-xl tracking-[0.099rem] md:tracking-[0.125rem] uppercase -mt-8 md:-mt-10 z-30 relative whitespace-nowrap">
@@ -59,6 +60,21 @@ import '../styles/global.css';
 					</div>
 				</div>
 			</section>
+
+			<!-- Seccion de Cita Naranja -->
+			<section class="bg-primary pt-16 pb-[3.35rem] md:py-32 px-6 flex flex-col items-center justify-center text-center text-white">
+				<div class="max-w-[19.5rem] md:max-w-[55.75rem]">
+					<h2 class="font-playfair text-[1.886rem] md:text-[5.397rem] leading-[0.94] mb-3 md:mb-12 ">
+						La <span class="font-bold">terapia</span> no es para personas rotas, <br/>
+						<span class="font-bold">es para valientes</span> que quieren entenderse.
+					</h2>
+					<p class="font-inter text-[1.13rem] md:text-[2.576rem] leading-[1.33] uppercase opacity-90">
+						Porque entenderte es el primer paso para dejar de repetir lo que te lastima.
+					</p>
+				</div>
+			</section>
+
+
 		</main>
 	</body>
 </html>
