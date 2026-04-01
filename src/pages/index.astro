@@ -1,17 +1,64 @@
 ---
-
+import '../styles/global.css';
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Carla Perrotta | Psicóloga Clínica</title>
+		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="antialiased font-inter text-dark">
+		<!-- Aquí irá el desarrollo Mobile First -->
+		<header class="bg-primary h-[5.75rem] flex items-center justify-center px-4 top-0 z-50">
+			<p class="font-dmsans font-bold text-white text-base md:text-[1.5625rem] tracking-[0.16rem] leading-5.25   uppercase text-center max-w-[17.5rem] md:max-w-none">
+				Sanar también es entender tu historia.
+			</p>
+		</header>
+		<main>
+			<section class="relative bg-secondary overflow-hidden -mt-[0.58rem] pt-7 pb-16 flex flex-col items-center">
+				<!-- Nombre de impacto -->
+				<h1 class="font-playfair font-normal text-white text-[5.25rem] md:text-[14.75rem] leading-[0.77] text-center z-10 relative px-4">
+					Carla<br />Perrotta
+				</h1>
+
+				<!-- Contenedor Imagen + Badge (Pegados al texto sin superponerse) -->
+				<div class="relative flex flex-col items-center z-20 -mt-12 md:-mt-18">
+					<div class="w-[20.511rem] h-[26.209rem] md:w-[38.154rem] md:h-[48.753rem]">
+						<img 
+							src="https://www.figma.com/api/mcp/asset/6fa0f71c-df7b-4d85-809c-f644ddcba393" 
+							alt="Carla Perrotta" 
+							class="w-full h-full object-cover"
+						/>
+					</div>
+					<!-- Badge superpuesto a la base de la imagen -->
+					<span class="bg-primary text-white font-dmsans font-bold py-[0.59rem] px-[1.98rem] rounded-full text-[0.99rem] md:text-xl tracking-[0.099rem] md:tracking-[0.125rem] uppercase -mt-8 md:-mt-10 z-30 relative whitespace-nowrap">
+						Psicóloga clínica
+					</span>
+				</div>
+
+				<!-- Info y Especialidades -->
+				<div class="mt-2 flex flex-col items-center text-center px-6 z-30">
+					<h2 class="font-inter font-bold text-dark text-[1.466875rem] md:text-[1.5625rem] leading-[1.26] mb-5 max-w-[18.4375rem] md:max-w-[35.375rem]">
+						Psicoanálisis + terapia <br /> cognitivo-conductual
+					</h2>
+
+					<div class="font-inter font-medium text-dark text-xl md:text-[1.5625rem] leading-[1.44] max-w-[20.8125rem] md:max-w-[41.5625rem]">
+						<p>Especializada en:</p>
+						<p>Ansiedad | Vínculos afectivos |</p>
+						<p>Abuso narcisista</p>
+						<p>Dependencia emocional | Duelo</p>
+					</div>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>

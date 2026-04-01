@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  /* Colores extraídos de Figma */
+  --color-primary: #FD9651;
+  --color-primary-light: #FFB081; /* Variación para estados interactivos */
+  --color-secondary: #E3BFE5;
+  --color-secondary-light: #FFECFF;
+  --color-secondary-accent: #F3C8F3;
+  --color-dark: #3F3A39;
+  --color-neutral-2: #DEE5ED;
+  --color-white: #FFFFFF;
+
+  /* Tipografías */
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+  --font-dmsans: "DM Sans", sans-serif;
+  --font-akzidenz: "Inter", sans-serif; /* Fallback a Inter según requerimiento */
+}
+
+@layer base {
+  body {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
