@@ -4,9 +4,11 @@ import '../styles/global.css';
 import { Image } from 'astro:assets';
 import imagen1 from '../assets/imagenCarla1.png';
 import imagen2 from '../assets/imagenCarla2.png';
+import imagen3 from '../assets/imagenCarla3.png';
 import iconSnowflake from '../assets/Snowflake.svg';
 import iconSparkle from '../assets/Sparkle.svg';
 import iconStar from '../assets/Star.svg';
+import logo from '../assets/Logo.svg';
 ---
 
 <html lang="es">
@@ -42,7 +44,7 @@ import iconStar from '../assets/Star.svg';
 				<!-- Contenedor Imagen + Badge (Pegados al texto sin superponerse) -->
 				<div class="relative flex flex-col items-center z-20 -mt-12 md:-mt-18">
 					<div class="w-[20.511rem] h-[26.209rem] md:w-[38.154rem] md:h-[48.753rem]">
-						<Image src={imagen1} alt="Carla Perrotta" loading="eager" class="w-full h-full object-cover"/>
+						<Image src={imagen1} width={1200} loading="eager" fetchpriority="high" alt="Carla Perrotta" class="w-full h-full object-cover"/>
 					</div>
 					<!-- Badge superpuesto a la base de la imagen -->
 					<span class="bg-primary text-white font-dmsans font-bold py-[0.59rem] px-[1.98rem] rounded-full text-[0.99rem] md:text-xl tracking-[0.099rem] md:tracking-[0.125rem] uppercase -mt-8 md:-mt-10 z-30 relative whitespace-nowrap">
@@ -83,7 +85,7 @@ import iconStar from '../assets/Star.svg';
 				<!-- Imagen de Carla -->
 				<div class="w-full md:w-1/2 flex justify-center md:justify-end md:pr-12 -mt-5">
 					<div class="w-[27.4125rem] h-[41.11875rem] relative">
-						<Image src={imagen2} alt="Carla Perrotta" class="w-full h-full object-cover" />
+						<Image src={imagen2} width={720} height={1080} quality={100} alt="Carla Perrotta" class="w-full h-full object-cover" />
 					</div>
 				</div>
 
@@ -112,6 +114,40 @@ import iconStar from '../assets/Star.svg';
 						<p class="text-white text-[1.11rem] md:text-[1.56rem] leading-[1.44] font-inter font-bold">
 							No todo lo que duele es debilidad. <span class="font-medium">A veces es historia no comprendida.</span>
 						</p>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Seccion de Agenda de Cita -->
+			<section class="relative bg-primary flex flex-col items-center pb-0">
+				<!-- Logo CP flotante que une secciones -->
+				<div class="absolute -top-[2.75rem] left-1/2 -translate-x-1/2 w-[4.87rem] h-[4.87rem] md:w-[8.77rem] md:h-[8.77rem] z-40">
+					<Image src={logo} alt="Logo Carla Perrotta" class="w-full h-full object-contain" />
+				</div>
+
+				<div class="flex flex-col items-center w-full pt-26 text-center">
+					<p class="font-inter font-normal text-white text-[1.5rem] md:text-[2.576rem] leading-[1.17] uppercase mb-2 max-w-[20rem] md:max-w-[35.3rem]">
+						A veces no necesitas más tiempo…
+					</p>
+					<h2 class="font-playfair text-white text-[2.25rem] md:text-[3.537rem] leading-[1.05] mb-7 max-w-[22rem] md:max-w-[37rem]">
+						necesitas un <br/> espacio donde <span class="font-bold italic">entender</span> lo que te pasa y <span class="font-bold italic">empezar a transformarlo.</span>
+					</h2>
+					
+					<!-- Botón WhatsApp -->
+					<a href="#" class="flex bg-secondary-accent hover:bg-white transition-all px-[2.02rem] py-3 md:px-[2.87rem] md:py-[1.43rem] rounded-full shadow-lg">
+						<span class="font-inter font-extrabold text-dark  text-[0.71rem] leading-normalmd:text-[1rem] tracking-[0.1rem] uppercase">
+							Agenda tu sesión vía WhatsApp
+						</span>
+					</a>
+
+					<!-- Imagen Carla Laptop -->
+					<div class="w-full md:w-[45rem] mt-5">
+						<Image 
+							src={imagen3} 
+							alt="Carla Perrotta con laptop" 
+							quality={90}
+							class="w-full h-auto  object-cover"
+						/>
 					</div>
 				</div>
 			</section>
