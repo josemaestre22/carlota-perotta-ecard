@@ -26,7 +26,6 @@ import logo from '../assets/Logo.svg';
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 	</head>
 	<body class="antialiased font-inter text-dark">
-		<!-- Aquí irá el desarrollo Mobile First -->
 		<header class="bg-primary h-[5.75rem] flex items-center justify-center px-4 top-0 z-50">
 			<p class="font-dmsans font-bold text-white text-base md:text-[1.5625rem] tracking-[0.16rem] leading-5.25 uppercase text-center max-w-[17.5rem] md:max-w-none">
 				Sanar también es entender tu historia.
@@ -34,30 +33,22 @@ import logo from '../assets/Logo.svg';
 		</header>
 		<main>
 			
-			<!-- Seccion de Presentacion -->
 			<section class="relative bg-secondary overflow-hidden -mt-[0.58rem] pt-7 pb-13 flex flex-col items-center">
-				<!-- Nombre de impacto -->
 				<h1 class="font-playfair font-normal text-white text-[5.25rem] md:text-[14.75rem] leading-[0.77] text-center z-10 relative px-4">
 					Carla<br />Perrotta
 				</h1>
-
-				<!-- Contenedor Imagen + Badge (Pegados al texto sin superponerse) -->
 				<div class="relative flex flex-col items-center z-20 -mt-12 md:-mt-18">
 					<div class="w-[20.511rem] h-[26.209rem] md:w-[38.154rem] md:h-[48.753rem]">
 						<Image src={imagen1} width={1200} loading="eager" fetchpriority="high" alt="Carla Perrotta" class="w-full h-full object-cover"/>
 					</div>
-					<!-- Badge superpuesto a la base de la imagen -->
 					<span class="bg-primary text-white font-dmsans font-bold py-[0.59rem] px-[1.98rem] rounded-full text-[0.99rem] md:text-xl tracking-[0.099rem] md:tracking-[0.125rem] uppercase -mt-8 md:-mt-10 z-30 relative whitespace-nowrap">
 						Psicóloga clínica
 					</span>
 				</div>
-
-				<!-- Info y Especialidades -->
 				<div class="mt-2 flex flex-col items-center text-center px-6 z-30">
 					<h2 class="font-inter font-bold text-dark text-[1.466875rem] md:text-[1.5625rem] leading-[1.26] mb-5 max-w-[18.4375rem] md:max-w-[35.375rem]">
 						Psicoanálisis + terapia <br /> cognitivo-conductual
 					</h2>
-
 					<div class="font-inter font-medium text-dark text-xl md:text-[1.5625rem] leading-[1.44] max-w-[20.8125rem] md:max-w-[41.5625rem]">
 						<p>Especializada en:</p>
 						<p>Ansiedad | Vínculos afectivos |</p>
@@ -67,7 +58,6 @@ import logo from '../assets/Logo.svg';
 				</div>
 			</section>
 
-			<!-- Seccion de Cita Naranja -->
 			<section class="bg-primary pt-16 pb-12 md:py-32 px-6 flex flex-col items-center justify-center text-center text-white">
 				<div class="max-w-[19.5rem] md:max-w-[55.75rem]">
 					<h2 class="font-playfair text-[1.886rem] md:text-[5.397rem] leading-[0.94] mb-3 md:mb-12 ">
@@ -80,18 +70,13 @@ import logo from '../assets/Logo.svg';
 				</div>
 			</section>
 
-			<!-- Seccion de 3 Beneficios -->
 			<section class="bg-secondary-light overflow-hidden flex flex-col md:flex-row items-center justify-center pb-26 md:py-0 md:h-[42.9375rem]">
-				<!-- Imagen de Carla -->
 				<div class="w-full md:w-1/2 flex justify-center md:justify-end md:pr-12 -mt-5">
 					<div class="w-[27.4125rem] h-[41.11875rem] relative">
 						<Image src={imagen2} width={720} height={1080} quality={100} alt="Carla Perrotta" class="w-full h-full object-cover" />
 					</div>
 				</div>
-
-				<!-- Tarjetas de Beneficios -->
 				<div class="-mt-57 md:mt-0 flex flex-col gap-[1.51rem] md:gap-[2.125rem] px-6 md:px-0 md:w-1/2 md:items-start z-10">
-					<!-- Beneficio 1 -->
 					<div class="bg-primary rounded-[1.29rem] px-[1.25rem] py-2.5 md:p-[1.625rem] flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-[34.96rem]">
 						<Image src={iconSnowflake} alt="" class="w-8.5 h-8.5 md:w-12 md:h-12 shrink-0" />
 						<p class="text-white text-[1.11rem] md:text-[1.56rem] leading-[1.44] font-inter">
@@ -99,16 +84,12 @@ import logo from '../assets/Logo.svg';
 							Es dejar de vivir atrapado en ello.
 						</p>
 					</div>
-
-					<!-- Beneficio 2 -->
 					<div class="bg-primary rounded-[1.29rem] px-[1.25rem] py-2.5 md:p-[1.625rem] flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-[34.96rem]">
 						<Image src={iconSparkle} alt="" class="w-8.5 h-8.5 md:w-12 md:h-12 shrink-0" />
 						<p class="text-white text-[1.11rem] md:text-[1.56rem] leading-[1.44] font-inter font-bold">
 							Entender lo que sientes cambia la forma en que te relacionas.
 						</p>
 					</div>
-
-					<!-- Beneficio 3 -->
 					<div class="bg-primary rounded-[1.29rem] px-[1.25rem] py-2.5 md:p-[1.625rem] flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-[34.96rem]">
 						<Image src={iconStar} alt="" class="w-8.5 h-8.5 md:w-12 md:h-12 shrink-0" />
 						<p class="text-white text-[1.11rem] md:text-[1.56rem] leading-[1.44] font-inter font-bold">
@@ -118,13 +99,10 @@ import logo from '../assets/Logo.svg';
 				</div>
 			</section>
 			
-			<!-- Seccion de Agenda de Cita -->
 			<section class="relative bg-primary flex flex-col items-center pb-0">
-				<!-- Logo CP flotante que une secciones -->
 				<div class="absolute -top-[2.75rem] left-1/2 -translate-x-1/2 w-[4.87rem] h-[4.87rem] md:w-[8.77rem] md:h-[8.77rem] z-40">
 					<Image src={logo} alt="Logo Carla Perrotta" class="w-full h-full object-contain" />
 				</div>
-
 				<div class="flex flex-col items-center w-full pt-26 text-center">
 					<p class="font-inter font-normal text-white text-[1.5rem] md:text-[2.576rem] leading-[1.17] uppercase mb-2 max-w-[20rem] md:max-w-[35.3rem]">
 						A veces no necesitas más tiempo…
@@ -132,26 +110,150 @@ import logo from '../assets/Logo.svg';
 					<h2 class="font-playfair text-white text-[2.25rem] md:text-[3.537rem] leading-[1.05] mb-7 max-w-[22rem] md:max-w-[37rem]">
 						necesitas un <br/> espacio donde <span class="font-bold italic">entender</span> lo que te pasa y <span class="font-bold italic">empezar a transformarlo.</span>
 					</h2>
-					
-					<!-- Botón WhatsApp -->
 					<a href="#" class="flex bg-secondary-accent hover:bg-white transition-all px-[2.02rem] py-3 md:px-[2.87rem] md:py-[1.43rem] rounded-full shadow-lg">
 						<span class="font-inter font-extrabold text-dark  text-[0.71rem] leading-normalmd:text-[1rem] tracking-[0.1rem] uppercase">
 							Agenda tu sesión vía WhatsApp
 						</span>
 					</a>
-
-					<!-- Imagen Carla Laptop -->
 					<div class="w-full md:w-[45rem] mt-5">
-						<Image 
-							src={imagen3} 
-							alt="Carla Perrotta con laptop" 
-							quality={90}
-							class="w-full h-auto  object-cover"
-						/>
+						<Image src={imagen3} alt="Carla Perrotta con laptop" quality={90} class="w-full h-auto object-cover" />
 					</div>
 				</div>
 			</section>
 
+			<!-- Seccion 5: Inhala y Exala con Sincronización Bio-Feedback -->
+			<section id="breathing-section" class="bg-secondary-light py-20 md:py-32 px-6 flex flex-col items-center text-center">
+				<div class="flex flex-col items-center gap-10 md:gap-14 max-w-[19.125rem] md:max-w-none">
+					<h2 class="font-playfair text-primary text-[3rem] md:text-[5.397rem] leading-[0.94]">
+						<span class="font-bold italic">Si en este momento,</span><br />
+						<span class="font-normal">no te sientes cómodo con <br/> tu sentir</span>
+					</h2>
+					
+					<div class="w-[18.31rem] h-[2.58rem] md:w-[35rem] md:h-[5rem] relative">
+						<svg id="pulse-drawing-svg" class="w-full h-full opacity-100 transition-opacity duration-700" preserveAspectRatio="none" viewBox="0 0 315 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path id="pulse-drawing-path" d="M1.3 41.8H47.5C50.2 28.3 55.6 1.3 55.6 1.3L66.6 42.2H88.3L96.4 12L104.5 42.1H203.5C206.2 28.3 211.6 1.3 211.6 1.3L222.6 42.6H244.3L252.4 12.4L260.5 42.5H313.3" stroke="#FD9651" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+
+					<button id="breathing-btn" class="group relative bg-primary px-[2.87rem] py-4.5 md:px-16 md:py-8 rounded-[6.45rem] cursor-pointer hover:shadow-xl active:scale-95 outline-none will-change-transform transition-transform duration-700 ease-out">
+						<p id="breathing-text" class="font-inter font-extrabold text-white text-[1rem] md:text-[1.5rem] tracking-[0.14rem] md:tracking-[0.2rem] uppercase whitespace-nowrap transition-opacity duration-200" aria-live="polite">
+							Inhala y exala.
+						</p>
+					</button>
+				</div>
+			</section>
+
 		</main>
+
+		<script>
+			const btn = document.getElementById('breathing-btn');
+			const text = document.getElementById('breathing-text');
+			const path = document.getElementById('pulse-drawing-path') as unknown as SVGPathElement;
+			
+			let isAnimating = false;
+			let rafId: number;
+			let currentDistance = 0;
+			let lastTimestamp = 0;
+			let currentUIState = 'idle'; 
+			let isChangingText = false;
+
+			const baselineY = 41.8;
+			const peakY = 1.3;
+			const length = path.getTotalLength();
+
+			path.style.strokeDasharray = `${length}`;
+			path.style.strokeDashoffset = '0';
+
+			function setUIState(newState: string) {
+				if (!text || currentUIState === newState || isChangingText) return;
+				
+				isChangingText = true;
+				currentUIState = newState;
+				text.style.opacity = '0';
+				
+				setTimeout(() => {
+					if (newState === 'inhale') text.innerText = 'Inhala...';
+					else if (newState === 'exhale') text.innerText = 'Exala...';
+					else text.innerText = 'Inhala y exala.';
+					
+					text.style.opacity = '1';
+					setTimeout(() => { isChangingText = false; }, 200);
+				}, 150);
+			}
+
+			function updateBreathing(timestamp: number) {
+				if (!isAnimating) return;
+				if (!lastTimestamp) lastTimestamp = timestamp;
+				
+				const deltaTime = timestamp - lastTimestamp;
+				lastTimestamp = timestamp;
+
+				const duration = 30000;
+				currentDistance += (length / duration) * deltaTime;
+
+				if (currentDistance >= length) {
+					stopAnimation();
+					return;
+				}
+
+				path.style.strokeDashoffset = (length - currentDistance).toString();
+
+				const currentPoint = path.getPointAtLength(currentDistance);
+				const nextPoint = path.getPointAtLength(Math.min(currentDistance + 4, length));
+				
+				const heightIntensity = (baselineY - currentPoint.y) / (baselineY - peakY);
+				const scale = 1 + (Math.max(0, heightIntensity) * 0.15);
+				btn?.style.setProperty('transform', `scale(${scale})`);
+
+				const dy = nextPoint.y - currentPoint.y;
+				
+				// Lógica de estado ultra-refinada
+				if (dy < -0.1) {
+					setUIState('inhale'); // Subiendo pico
+				} else if (dy > 0.1) {
+					setUIState('exhale'); // Bajando pico
+				} else {
+					// En zonas planas
+					if (currentDistance < length * 0.15) { 
+						// Parte plana inicial previa al primer pico -> Inhalamos
+						setUIState('inhale');
+					} else {
+						// Zonas planas entre picos y final -> Exhalamos (Esperando nueva subida)
+						setUIState('exhale');
+					}
+				}
+
+				rafId = requestAnimationFrame(updateBreathing);
+			}
+
+			function stopAnimation() {
+				isAnimating = false;
+				currentDistance = 0;
+				lastTimestamp = 0;
+				path.style.strokeDashoffset = '0';
+				btn?.style.setProperty('transform', 'scale(1)');
+				if (text) {
+					text.innerText = 'Inhala y exala.';
+					text.style.opacity = '1';
+				}
+				currentUIState = 'idle';
+				isChangingText = false;
+				cancelAnimationFrame(rafId);
+			}
+
+			btn?.addEventListener('click', () => {
+				if (isAnimating) {
+					stopAnimation();
+				} else {
+					isAnimating = true;
+					currentDistance = 0;
+					lastTimestamp = 0;
+					currentUIState = 'inhale'; // Forzamos estado inicial coherente
+					if (text) text.innerText = 'Inhala...';
+					path.style.strokeDashoffset = length.toString();
+					rafId = requestAnimationFrame(updateBreathing);
+				}
+			});
+		</script>
 	</body>
 </html>

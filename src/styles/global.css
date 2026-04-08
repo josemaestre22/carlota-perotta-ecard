@@ -3,7 +3,7 @@
 @theme {
   /* Colores extraídos de Figma */
   --color-primary: #FD9651;
-  --color-primary-light: #FFB081; /* Variación para estados interactivos */
+  --color-primary-light: #FFB081;
   --color-secondary: #E3BFE5;
   --color-secondary-light: #FFECFF;
   --color-secondary-accent: #F3C8F3;
@@ -15,7 +15,17 @@
   --font-playfair: "Playfair Display", serif;
   --font-inter: "Inter", sans-serif;
   --font-dmsans: "DM Sans", sans-serif;
-  --font-akzidenz: "Inter", sans-serif; /* Fallback a Inter según requerimiento */
+  --font-akzidenz: "Inter", sans-serif;
+
+  /* Animaciones */
+  --animate-draw-pulse: draw-pulse 8s linear infinite;
+  
+  @keyframes draw-pulse {
+    from { stroke-dashoffset: 1000; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  /* El botón ahora usará transiciones de clase controladas por JS para máxima precisión */
 }
 
 @layer base {
@@ -27,3 +37,4 @@
     -moz-osx-font-smoothing: grayscale;
   }
 }
+
