@@ -9,6 +9,11 @@ import iconSnowflake from '../assets/Snowflake.svg';
 import iconSparkle from '../assets/Sparkle.svg';
 import iconStar from '../assets/Star.svg';
 import logo from '../assets/Logo.svg';
+
+import iconMail from '../assets/IconMail.svg';
+import iconTikTok from '../assets/IconTikTok.svg';
+import iconWhatsAppSocial from '../assets/IconWhatsApp.svg';
+import iconInstagram from '../assets/IconInstagram.svg';
 ---
 
 <html lang="es">
@@ -32,7 +37,7 @@ import logo from '../assets/Logo.svg';
 			</p>
 		</header>
 		<main>
-			
+			<!-- Seccion 1: Presentacion -->
 			<section class="relative bg-secondary overflow-hidden -mt-[0.58rem] pt-7 pb-13 flex flex-col items-center">
 				<h1 class="font-playfair font-normal text-white text-[5.25rem] md:text-[14.75rem] leading-[0.77] text-center z-10 relative px-4">
 					Carla<br />Perrotta
@@ -57,7 +62,7 @@ import logo from '../assets/Logo.svg';
 					</div>
 				</div>
 			</section>
-
+			<!-- Seccion 2: Cita con Fondo Naranja -->
 			<section class="bg-primary pt-16 pb-12 md:py-32 px-6 flex flex-col items-center justify-center text-center text-white">
 				<div class="max-w-[19.5rem] md:max-w-[55.75rem]">
 					<h2 class="font-playfair text-[1.886rem] md:text-[5.397rem] leading-[0.94] mb-3 md:mb-12 ">
@@ -69,7 +74,7 @@ import logo from '../assets/Logo.svg';
 					</p>
 				</div>
 			</section>
-
+			<!-- Seccion 3: Beneficios -->
 			<section class="bg-secondary-light overflow-hidden flex flex-col md:flex-row items-center justify-center pb-26 md:py-0 md:h-[42.9375rem]">
 				<div class="w-full md:w-1/2 flex justify-center md:justify-end md:pr-12 -mt-5">
 					<div class="w-[27.4125rem] h-[41.11875rem] relative">
@@ -98,7 +103,7 @@ import logo from '../assets/Logo.svg';
 					</div>
 				</div>
 			</section>
-			
+			<!-- Seccion 4: Agenda de Cita -->
 			<section class="relative bg-primary flex flex-col items-center pb-0">
 				<div class="absolute -top-[2.75rem] left-1/2 -translate-x-1/2 w-[4.87rem] h-[4.87rem] md:w-[8.77rem] md:h-[8.77rem] z-40">
 					<Image src={logo} alt="Logo Carla Perrotta" class="w-full h-full object-contain" />
@@ -120,7 +125,6 @@ import logo from '../assets/Logo.svg';
 					</div>
 				</div>
 			</section>
-
 			<!-- Seccion 5: Inhala y Exala con Sincronización Bio-Feedback -->
 			<section id="breathing-section" class="bg-secondary-light py-20 md:py-32 px-6 flex flex-col items-center text-center">
 				<div class="flex flex-col items-center gap-10 md:gap-14 max-w-[19.125rem] md:max-w-none">
@@ -144,6 +148,31 @@ import logo from '../assets/Logo.svg';
 			</section>
 
 		</main>
+
+		<footer class="bg-secondary py-18 flex flex-col items-center gap-[1.2rem]">
+			<div class="flex flex-col items-center text-dark">
+				<p class="font-inter font-bold text-[1.55rem] leading-[1.2] pb-1">
+					Contacto
+				</p>
+				<p class="font-inter font-normal text-[1.45rem] leading-[1.44] text-center">
+					Carla Perrotta  | Psicólogo
+				</p>
+			</div>
+			<div class="grid grid-cols-2 gap-[2.02rem]">
+				<a href="mailto:carla.perrotta@example.com" class="w-[4.74rem] h-[4.74rem] transition-transform hover:scale-110">
+					<Image src={iconMail} alt="Email" class="w-full h-full object-contain" />
+				</a>
+				<a href="https://tiktok.com/@carlaperrotta" target="_blank" rel="noopener noreferrer" class="w-[4.74rem] h-[4.74rem] transition-transform hover:scale-110">
+					<Image src={iconTikTok} alt="TikTok" class="w-full h-full object-contain" />
+				</a>
+				<a href="https://wa.me/yourwhatsappnumber" target="_blank" rel="noopener noreferrer" class="w-[4.74rem] h-[4.74rem] transition-transform hover:scale-110">
+					<Image src={iconWhatsAppSocial} alt="WhatsApp" class="w-full h-full object-contain" />
+				</a>
+				<a href="https://instagram.com/carlaperrotta" target="_blank" rel="noopener noreferrer" class="w-[4.74rem] h-[4.74rem] transition-transform hover:scale-110">
+					<Image src={iconInstagram} alt="Instagram" class="w-full h-full object-contain" />
+				</a>
+			</div>
+		</footer>
 
 		<script>
 			const btn = document.getElementById('breathing-btn');
