@@ -38,27 +38,46 @@ import iconInstagram from '../assets/IconInstagram.svg';
 		</header>
 		<main>
 			<!-- Seccion 1: Presentacion -->
-			<section class="relative bg-secondary overflow-hidden -mt-[0.58rem] pt-7 pb-13 flex flex-col items-center">
-				<h1 class="font-playfair font-normal text-white text-[5.25rem] md:text-[14.75rem] leading-[0.77] text-center z-10 relative px-4">
-					Carla<br />Perrotta
-				</h1>
-				<div class="relative flex flex-col items-center z-20 -mt-12 md:-mt-18">
-					<div class="w-[20.511rem] h-[26.209rem] md:w-[38.154rem] md:h-[48.753rem]">
-						<Image src={imagen1} width={1200} loading="eager" fetchpriority="high" alt="Carla Perrotta" class="w-full h-full object-cover"/>
+			<section class="relative bg-secondary overflow-hidden -mt-[0.58rem] pt-7 pb-13 flex flex-col items-center md:h-[51.875rem] md:pt-0 md:pb-0 md:block">
+				<!-- Contenedor de escritorio para posicionamiento preciso -->
+				<div class="md:relative md:w-full md:max-w-[90rem] md:mx-auto md:h-full">
+					
+					<!-- Nombre (Capa de fondo en desktop) -->
+					<h1 class="font-playfair font-normal text-white text-[5.25rem] md:text-[14.78rem] leading-[0.77] text-center z-10 relative px-4 md:absolute md:top-[3.07rem] md:left-[30.8125rem] md:text-left md:flex md:flex-col md:items-start md:px-0 md:w-auto">
+						<span>Carla</span>
+						<span>Perrotta</span>
+					</h1>
+
+					<!-- Imagen de Carla -->
+					<div class="relative flex flex-col items-center z-20 -mt-12 md:absolute md:left-[4.27rem] md:top-[3.61rem] md:mt-0">
+						<div class="w-[20.511rem] h-[26.209rem] md:w-[38.154rem] md:h-[48.753rem]">
+							<Image src={imagen1} width={1200} loading="eager" fetchpriority="high" alt="Carla Perrotta" class="w-full h-full object-cover"/>
+						</div>
+						<!-- Badge Mobile (Oculto en desktop) -->
+						<span class="bg-primary text-white font-dmsans font-bold py-[0.59rem] px-[1.98rem] rounded-full text-[0.99rem] tracking-[0.099rem] uppercase -mt-8 z-30 relative whitespace-nowrap md:hidden">
+							Psicóloga clínica
+						</span>
 					</div>
-					<span class="bg-primary text-white font-dmsans font-bold py-[0.59rem] px-[1.98rem] rounded-full text-[0.99rem] md:text-xl tracking-[0.099rem] md:tracking-[0.125rem] uppercase -mt-8 md:-mt-10 z-30 relative whitespace-nowrap">
-						Psicóloga clínica
-					</span>
-				</div>
-				<div class="mt-2 flex flex-col items-center text-center px-6 z-30">
-					<h2 class="font-inter font-bold text-dark text-[1.466875rem] md:text-[1.5625rem] leading-[1.26] mb-5 max-w-[18.4375rem] md:max-w-[35.375rem]">
-						Psicoanálisis + terapia <br /> cognitivo-conductual
-					</h2>
-					<div class="font-inter font-medium text-dark text-xl md:text-[1.5625rem] leading-[1.44] max-w-[20.8125rem] md:max-w-[41.5625rem]">
-						<p>Especializada en:</p>
-						<p>Ansiedad | Vínculos afectivos |</p>
-						<p>Abuso narcisista</p>
-						<p>Dependencia emocional | Duelo</p>
+
+					<!-- Bloque de Información Desktop -->
+					<div class="mt-2 flex flex-col items-center text-center px-6 z-30 md:absolute md:left-[42.125rem] md:top-[29rem] md:items-start md:text-left md:px-0 md:mt-0">
+						<!-- Badge Desktop -->
+						<span class="hidden md:inline-flex bg-primary text-white font-dmsans font-bold py-[1.25rem] px-[2.5rem] rounded-[5.625rem] text-[1.25rem] tracking-[0.125rem] md:[font-variation-settings:'opsz'_14] uppercase mb-[1.81rem] whitespace-nowrap">
+							Psicóloga clínica
+						</span>
+						
+						<h2 class="font-inter font-bold text-dark text-[1.466875rem] md:text-[1.5625rem] leading-[1.26] mb-5 md:mb-[1.6rem] max-w-[18.4375rem] md:max-w-[35.375rem]">
+							Psicoanálisis + terapia <br class="md:hidden" /> cognitivo-conductual
+						</h2>
+
+						<div class="font-inter font-medium text-dark text-xl md:text-[1.5625rem] leading-[1.44] max-w-[20.8125rem] md:max-w-[41.5625rem]">
+							<p>Especializada en:</p>
+							<p class="md:whitespace-nowrap">
+								<span class="block md:inline">Ansiedad | Vínculos afectivos |</span>
+								<span class="block md:inline"> Abuso narcisista</span>
+							</p>
+							<p>Dependencia emocional | Duelo</p>
+						</div>
 					</div>
 				</div>
 			</section>
