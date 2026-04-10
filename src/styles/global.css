@@ -31,12 +31,9 @@
 @layer base {
   html {
     font-size: 16px;
-    /* Escalado Fluido Proporcional para Desktop/Tablets */
-    @media (min-width: 768px) and (max-width: 1439px) {
-      font-size: 1.1111vw; /* Mantiene proporciones de diseño 1440px */
-    }
-    @media (min-width: 1440px) {
-      font-size: 16px;
+    /* Escalado Proporcional Inteligente (Ajusta por ancho o alto para que siempre quepa) */
+    @media (min-width: 768px) {
+      font-size: min(1.1111vw, 1.735vh);
     }
   }
 
