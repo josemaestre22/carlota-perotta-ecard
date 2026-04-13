@@ -1,10 +1,12 @@
 ---
 import '../styles/global.css';
 
-import { Image } from 'astro:assets';
+import { Image, Picture } from 'astro:assets';
+import ResponsiveCarla from '../components/ResponsiveCarla.astro';
 import imagen1 from '../assets/imagenCarla1.png';
 import imagen2 from '../assets/imagenCarla2.png';
 import imagen3 from '../assets/imagenCarla3.png';
+import imagen4 from '../assets/ImagenCarla4.png';
 import iconSnowflake from '../assets/Snowflake.svg';
 import iconSparkle from '../assets/Sparkle.svg';
 import iconStar from '../assets/Star.svg';
@@ -94,7 +96,7 @@ import iconInstagram from '../assets/IconInstagram.svg';
 				</div>
 			</section>
 			<!-- Seccion 3: Beneficios -->
-			<section class="relative bg-secondary-light overflow-hidden flex flex-col items-center justify-center pb-26 md:py-0 md:h-[51.875rem]">
+			<section class="relative bg-secondary-light overflow-hidden flex flex-col items-center justify-center pb-26 md:py-0 md:h-[43.25rem]">
 				<div class="md:relative md:w-[90rem] md:mx-auto md:h-full flex flex-col md:flex-none items-center justify-center">
 					<!-- Imagen de Carla -->
 					<div class="w-full md:w-auto flex justify-center md:justify-start md:absolute md:left-[-6.65rem] md:top-[-8.09rem] -mt-5 md:mt-0">
@@ -104,7 +106,7 @@ import iconInstagram from '../assets/IconInstagram.svg';
 					</div>
 					<!-- Bloque de Beneficios -->
 					<div class="-mt-57 md:mt-0 flex flex-col items-center md:items-start gap-[1.51rem] md:gap-[2.125rem] px-6 md:px-0 md:w-[34.96rem] md:absolute md:left-[47.68rem] md:top-1/2 md:-translate-y-1/2 z-10">
-						<div class="bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-[1.625rem] py-2.5 md:py-[1.31rem] flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
+						<div class="bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-7 py-2.5 md:py-3 flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
 							<div class="w-8.5 h-8.5 md:w-[3.07rem] md:h-[2.91rem] shrink-0">
 								<Image src={iconSnowflake} alt="" class="w-full h-full" />
 							</div>
@@ -113,7 +115,7 @@ import iconInstagram from '../assets/IconInstagram.svg';
 								<p>Es dejar de vivir atrapado en ello.</p>
 							</div>
 						</div>
-						<div class="bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-[1.625rem] py-2.5 md:py-[1.31rem] flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
+						<div class="bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-7 py-2.5 md:py-3 flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
 							<div class="w-8.5 h-8.5 md:w-[2.71rem] md:h-[2.82rem] shrink-0">
 								<Image src={iconSparkle} alt="" class="w-full h-full" />
 							</div>
@@ -121,45 +123,52 @@ import iconInstagram from '../assets/IconInstagram.svg';
 								Entender lo que sientes cambia la forma en que te relacionas.
 							</p>
 						</div>
-						<div class="bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-[1.625rem] py-2.5 md:py-[1.31rem] flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
+						<div class="bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-10 py-2.5 md:py-3 flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
 							<div class="w-8.5 h-8.5 md:w-[2.99rem] md:h-[3.23rem] shrink-0">
 								<Image src={iconStar} alt="" class="w-full h-full" />
 							</div>
 							<p class="text-white text-[1.11rem] md:text-[1.56rem] leading-[1.44] font-inter font-bold">
-								No todo lo que duele es debilidad. <span class="font-medium">A veces es historia no comprendida.</span>
+								No todo lo que duele es <br class="hidden md:inline"/>debilidad. <span class="font-medium">A veces es historia no comprendida.</span>
 							</p>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- Seccion 4: Agenda de Cita -->
-			<section class="relative bg-primary flex flex-col items-center pb-0">
-				<div class="absolute -top-[2.75rem] left-1/2 -translate-x-1/2 w-[4.87rem] h-[4.87rem] md:w-[8.77rem] md:h-[8.77rem] z-40">
+			<section class="relative bg-primary flex flex-col md:flex-row items-center md:justify-center pb-0 md:h-[51.875rem]">
+				<!-- logo Carla Perrotta-->
+				<div class="absolute -top-[2.75rem] md:-top-[4.75rem] left-1/2 -translate-x-1/2 w-[4.87rem] h-[4.87rem] md:w-[8.77rem] md:h-[8.77rem] z-40">
 					<Image src={logo} alt="Logo Carla Perrotta" class="w-full h-full object-contain" />
 				</div>
-				<div class="flex flex-col items-center w-full pt-26 text-center">
-					<p class="font-inter font-normal text-white text-[1.5rem] md:text-[2.576rem] leading-[1.17] uppercase mb-2 max-w-[20rem] md:max-w-[35.3rem]">
+				
+				<!-- Bloque de Texto -->
+				<div class="flex flex-col items-center md:items-start pt-26 md:-mt-38 md:ml-50 md:-mr-30 text-center md:text-left z-10 ">
+					<p class="font-inter font-medium text-white text-[1.5rem] md:text-[2.576rem] leading-[1.17] uppercase mb-2 md:mb-3 max-w-[20rem] md:max-w-[35.3rem]">
 						A veces no necesitas más tiempo…
 					</p>
-					<h2 class="font-playfair text-white text-[2.25rem] md:text-[3.537rem] leading-[1.05] mb-7 max-w-[22rem] md:max-w-[37rem]">
-						necesitas un <br/> espacio donde <span class="font-bold italic">entender</span> lo que te pasa y <span class="font-bold italic">empezar a transformarlo.</span>
+					<h2 class="font-playfair text-white text-[2.25rem] md:text-[3.537rem] leading-[1.05] mb-7 md:mb-[2.62rem] max-w-[22rem] md:max-w-[37rem]">
+						necesitas un <br/ class="md:hidden"> espacio donde <span class="font-bold italic">entender</span> lo que te pasa y <span class="font-bold italic">empezar a transformarlo.</span>
 					</h2>
-					<a href="#" class="flex bg-secondary-accent hover:bg-white transition-all px-[2.02rem] py-3 md:px-[2.87rem] md:py-[1.43rem] rounded-full shadow-lg">
-						<span class="font-inter font-extrabold text-dark  text-[0.71rem] leading-normalmd:text-[1rem] tracking-[0.1rem] uppercase">
+					<a href="#" class="flex bg-secondary-accent hover:bg-white transition-all px-[2.02rem] py-3 md:px-[2.87rem] md:py-4 rounded-full shadow-lg">
+						<span class="font-inter font-extrabold text-dark text-[0.71rem] md:text-[1rem] leading-normal tracking-[0.1rem] md:tracking-[0.14rem] uppercase">
 							Agenda tu sesión vía WhatsApp
 						</span>
 					</a>
-					<div class="w-full md:w-[45rem] mt-5">
-						<Image src={imagen3} alt="Carla Perrotta con laptop" quality={90} class="w-full h-auto object-cover" />
-					</div>
+				</div>
+
+				<!-- Imagen Lateral Corregida con Art Direction (Custom Component) -->
+				<div class="w-full md:h-full md:w-auto mt-5 md:mt-0">
+					<ResponsiveCarla 
+						imgClass="w-full h-auto md:h-full "
+					/>
 				</div>
 			</section>
 			<!-- Seccion 5: Inhala y Exala con Sincronización Bio-Feedback -->
 			<section id="breathing-section" class="bg-secondary-light py-20 md:py-32 px-6 flex flex-col items-center text-center">
 				<div class="flex flex-col items-center gap-10 md:gap-14 max-w-[19.125rem] md:max-w-none">
 					<h2 class="font-playfair text-primary text-[3rem] md:text-[5.397rem] leading-[0.94]">
-						<span class="font-bold italic">Si en este momento,</span><br />
-						<span class="font-normal">no te sientes cómodo con <br/> tu sentir</span>
+						<span class="font-bold italic">Si en este momento,</span><br class="md:hidden"/>
+						<span class="font-normal">no te <br class="hidden md:inline"/>sientes cómodo con <br/ class="md:hidden"> tu sentir</span>
 					</h2>
 					
 					<div class="w-[18.31rem] h-[2.58rem] md:w-[35rem] md:h-[5rem] relative">
@@ -187,7 +196,7 @@ import iconInstagram from '../assets/IconInstagram.svg';
 					Carla Perrotta  | Psicólogo
 				</p>
 			</div>
-			<div class="grid grid-cols-2 gap-[2.02rem]">
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-[2.02rem]">
 				<a href="mailto:Carlaperrottacorro@gmail.com" class="w-[4.74rem] h-[4.74rem] transition-transform hover:scale-110">
 					<Image src={iconMail} alt="Email" class="w-full h-full object-contain" />
 				</a>

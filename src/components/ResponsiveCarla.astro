@@ -1,0 +1,33 @@
+---
+import { getImage } from "astro:assets";
+import imagen3 from '../assets/imagenCarla3.png';
+import imagen4 from '../assets/ImagenCarla4.png';
+
+const mobileImg = await getImage({
+  src: imagen3,
+  format: 'webp',
+});
+
+const desktopImg = await getImage({
+  src: imagen4,
+  format: 'webp',
+});
+
+interface Props {
+  class?: string;
+  imgClass?: string;
+}
+
+const { class: className, imgClass } = Astro.props;
+---
+
+<picture class={className}>
+  <source media="(min-width: 768px)" srcset={desktopImg.src} />
+  <img 
+    src={mobileImg.src} 
+    alt="Carla Perrotta" 
+    class={imgClass} 
+    loading="lazy" 
+    decoding="async"
+  />
+</picture>
