@@ -53,7 +53,7 @@ import iconInstagram from '../assets/IconInstagram.svg';
 					<!-- Imagen de Carla -->
 					<div class="relative flex flex-col items-center z-20 -mt-12 md:absolute md:left-[4.25rem] md:top-[3.61rem] md:mt-0">
 						<div class="w-[20.511rem] h-[26.209rem] md:w-[38.154rem] md:h-[48.753rem]">
-							<Image src={imagen1} width={1200} loading="eager" fetchpriority="high" alt="Carla Perrotta" class="w-full h-full object-cover"/>
+							<Image src={imagen1} loading="eager" fetchpriority="high" alt="Carla Perrotta" class="w-full h-full object-cover"/>
 						</div>
 						<!-- Badge Mobile (Oculto en desktop) -->
 						<span class="bg-primary text-white font-dmsans font-bold py-[0.59rem] px-[1.98rem] rounded-full text-[0.99rem] tracking-[0.099rem] uppercase -mt-8 z-30 relative whitespace-nowrap md:hidden">
@@ -101,12 +101,12 @@ import iconInstagram from '../assets/IconInstagram.svg';
 					<!-- Imagen de Carla -->
 					<div class="w-full md:w-auto flex justify-center md:justify-start md:absolute md:left-[-6.65rem] md:top-[-8.09rem] -mt-5 md:mt-0">
 						<div class="w-[27.4125rem] h-[41.11875rem] md:w-[55.26rem] md:h-[82.89rem] relative">
-							<Image src={imagen2} width={1200} height={1800} quality={100} alt="Carla Perrotta" class="w-full h-full object-cover" />
+							<Image src={imagen2} quality={95} alt="Carla Perrotta" class="w-full h-full object-cover" />
 						</div>
 					</div>
 					<!-- Bloque de Beneficios -->
 					<div class="-mt-57 md:mt-0 flex flex-col items-center md:items-start gap-[1.51rem] md:gap-[2.125rem] px-6 md:px-0 md:w-[34.96rem] md:absolute md:left-[47.68rem] md:top-1/2 md:-translate-y-1/2 z-10">
-						<div class="bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-7 py-2.5 md:py-3 flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
+						<div class="intersect-once intersect:motion-preset-slide-left motion-duration-2000  bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-7 py-2.5 md:py-3 flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
 							<div class="w-8.5 h-8.5 md:w-[3.07rem] md:h-[2.91rem] shrink-0">
 								<Image src={iconSnowflake} alt="" class="w-full h-full" />
 							</div>
@@ -115,7 +115,7 @@ import iconInstagram from '../assets/IconInstagram.svg';
 								<p>Es dejar de vivir atrapado en ello.</p>
 							</div>
 						</div>
-						<div class="bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-7 py-2.5 md:py-3 flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
+						<div class="intersect-once intersect:motion-preset-slide-left motion-duration-2100 bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-7 py-2.5 md:py-3 flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
 							<div class="w-8.5 h-8.5 md:w-[2.71rem] md:h-[2.82rem] shrink-0">
 								<Image src={iconSparkle} alt="" class="w-full h-full" />
 							</div>
@@ -123,7 +123,7 @@ import iconInstagram from '../assets/IconInstagram.svg';
 								Entender lo que sientes cambia la forma en que te relacionas.
 							</p>
 						</div>
-						<div class="bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-10 py-2.5 md:py-3 flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
+						<div class="intersect-once intersect:motion-preset-slide-left motion-duration-2200 bg-primary rounded-[1.29rem] md:rounded-[1.81rem] px-[1.25rem] md:px-10 py-2.5 md:py-3 flex items-center gap-[1.2rem] md:gap-[1.68rem] max-w-[18.81rem] md:max-w-none w-full">
 							<div class="w-8.5 h-8.5 md:w-[2.99rem] md:h-[3.23rem] shrink-0">
 								<Image src={iconStar} alt="" class="w-full h-full" />
 							</div>
@@ -322,5 +322,12 @@ import iconInstagram from '../assets/IconInstagram.svg';
 				}
 			});
 		</script>
+		<script>
+			// We import the observer directly from the package
+			import { Observer } from 'tailwindcss-intersect';
+			
+			// This initializes the 'intersect:' variant logic
+			Observer.start();
+    </script>
 	</body>
 </html>

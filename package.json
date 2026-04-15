@@ -14,6 +14,10 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.1.1",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.2",
+    "tailwindcss-motion": "^1.1.1"
+  },
+  "devDependencies": {
+    "tailwindcss-intersect": "^2.2.0"
   }
 }

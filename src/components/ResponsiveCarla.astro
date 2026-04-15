@@ -1,7 +1,7 @@
 ---
 import { getImage } from "astro:assets";
 import imagen3 from '../assets/imagenCarla3.png';
-import imagen4 from '../assets/ImagenCarla4.png';
+import imagen4 from '../assets/ImagenCarla4.10.png';
 
 const mobileImg = await getImage({
   src: imagen3,
@@ -11,6 +11,7 @@ const mobileImg = await getImage({
 const desktopImg = await getImage({
   src: imagen4,
   format: 'webp',
+  quality: 100,
 });
 
 interface Props {
