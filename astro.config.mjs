@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders  } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -7,5 +7,29 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+
+    fonts: [
+      {
+        provider: fontProviders.fontsource(),
+        name: "Playfair Display",
+        cssVariable: "--astro-font-playfair",
+        weights: ["400 900"], // Rango variable
+        styles: ["normal", "italic"] // Necesitamos itálicas para "entender" y "empezar a transformarlo"
+      },
+
+      {
+        provider: fontProviders.fontsource(),
+        name: "Inter",
+        cssVariable: "--astro-font-inter",
+        weights: ["100 900"], // Rango variable
+      },
+
+      {
+        provider: fontProviders.fontsource(),
+        name: "DM Sans",
+        cssVariable: "--astro-font-dmsans",
+        weights: ["100 1000"], // Rango variable
+      }
+    ]
 });

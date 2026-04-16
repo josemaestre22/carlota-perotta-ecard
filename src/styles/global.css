@@ -14,10 +14,10 @@
   --color-white: #FFFFFF;
 
   /* Tipografías */
-  --font-playfair: "Playfair Display", serif;
-  --font-inter: "Inter", sans-serif;
-  --font-dmsans: "DM Sans", sans-serif;
-  --font-akzidenz: "Inter", sans-serif;
+  --font-playfair: var(--astro-font-playfair, "Playfair Display", serif);
+  --font-inter: var(--astro-font-inter, "Inter", sans-serif);
+  --font-dmsans: var(--astro-font-dmsans, "DM Sans", sans-serif);
+  --font-akzidenz: var(--astro-font-inter, "Inter", sans-serif); /* Fallback a Inter */
 
   /* Animaciones */
   --animate-draw-pulse: draw-pulse 8s linear infinite;

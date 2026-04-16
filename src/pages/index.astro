@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 
-import { Image, Picture } from 'astro:assets';
+import { Image, Font } from 'astro:assets';
 import ResponsiveCarla from '../components/ResponsiveCarla.astro';
 import imagen1 from '../assets/imagenCarla1.png';
 import imagen2 from '../assets/imagenCarla2.png';
@@ -24,11 +24,9 @@ import iconInstagram from '../assets/IconInstagram.svg';
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Carla Perrotta | Psicóloga Clínica</title>
-		
-		<!-- Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+		<Font cssVariable="--astro-font-playfair"  preload/>
+		<Font cssVariable="--astro-font-inter" preload/>
+		<Font cssVariable="--astro-font-dmsans" preload/>
 	</head>
 	<body class="antialiased font-inter text-dark">
 		<header class="bg-primary py-6.5 md:py-10 flex items-center justify-center px-4 top-0 z-50">
@@ -51,7 +49,7 @@ import iconInstagram from '../assets/IconInstagram.svg';
 					<!-- Imagen de Carla -->
 					<div class="relative flex flex-col items-center z-20 -mt-12 md:absolute md:left-[4.25rem] md:top-[3.61rem] md:mt-0">
 						<div class="w-[20.511rem] h-[26.209rem] md:w-[38.154rem] md:h-[48.753rem]">
-							<Image src={imagen1} loading="eager" fetchpriority="high" alt="Carla Perrotta" class="w-full h-full object-cover"/>
+							<Image src={imagen1} layout='constrained' loading="eager" fetchpriority="high" alt="Carla Perrotta" class="w-full h-full object-cover"/>
 						</div>
 						<!-- Badge Mobile (Oculto en desktop) -->
 						<span class="bg-primary text-white font-dmsans font-bold py-[0.59rem] px-[1.98rem] rounded-full text-[0.99rem] tracking-[0.099rem] uppercase -mt-8 z-30 relative whitespace-nowrap md:hidden">
@@ -99,7 +97,7 @@ import iconInstagram from '../assets/IconInstagram.svg';
 					<!-- Imagen de Carla -->
 					<div class="w-full md:w-auto flex justify-center md:justify-start md:absolute md:left-[-6.65rem] md:top-[-8.09rem] -mt-5 md:mt-0">
 						<div class="w-[27.4125rem] h-[41.11875rem] md:w-[55.26rem] md:h-[82.89rem] relative">
-							<Image src={imagen2} quality={95} alt="Carla Perrotta" class="w-full h-full object-cover" />
+							<Image src={imagen2} layout='constrained' quality={95} alt="Carla Perrotta" class="w-full h-full object-cover" />
 						</div>
 					</div>
 					<!-- Bloque de Beneficios -->
