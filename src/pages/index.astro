@@ -9,7 +9,6 @@ import iconSnowflake from '../assets/Snowflake.svg';
 import iconSparkle from '../assets/Sparkle.svg';
 import iconStar from '../assets/Star.svg';
 import logo from '../assets/Logo.svg';
-
 import iconMail from '../assets/IconMail.svg';
 import iconTikTok from '../assets/IconTikTok.svg';
 import iconWhatsAppSocial from '../assets/IconWhatsApp.svg';
@@ -168,15 +167,15 @@ import iconInstagram from '../assets/IconInstagram.svg';
 						<span class="font-normal">no te <br class="hidden md:inline"/>sientes cómodo con <br/ class="md:hidden"> tu sentir</span>
 					</h2>
 					
-					<div class="w-[18.31rem] h-[2.58rem] md:w-[28rem] md:h-[4rem] relative">
-						<svg id="pulse-drawing-svg" class="w-full h-full opacity-100 transition-opacity duration-700" preserveAspectRatio="none" viewBox="0 0 315 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path id="pulse-drawing-path" d="M1.3 41.8H47.5C50.2 28.3 55.6 1.3 55.6 1.3L66.6 42.2H88.3L96.4 12L104.5 42.1H203.5C206.2 28.3 211.6 1.3 211.6 1.3L222.6 42.6H244.3L252.4 12.4L260.5 42.5H313.3" stroke="#FD9651" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+					<div class="w-[18.31rem] h-[5.55rem] md:w-[28rem] md:h-[8.49rem] relative">
+						<svg id="pulse-drawing-svg" class="w-full h-full opacity-100 transition-opacity duration-700" preserveAspectRatio="none" viewBox="0 0 752 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path id="pulse-drawing-path" d="M5.50134 220.743L62.8947 6.548H194.585L252.401 222.321L310.498 5.5H441.799L499.302 220.101L556.226 7.65685H689.014L745.731 219.33" stroke="#FD9651" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 					</div>
 
 					<button id="breathing-btn" class="group relative bg-primary px-[2.87rem] py-4.5 md:px-11 md:py-4.25 rounded-[6.45rem] cursor-pointer hover:shadow-xl active:scale-95 outline-none will-change-transform transition-transform duration-700 ease-out">
 						<p id="breathing-text" class="font-inter font-extrabold text-white text-[1rem] md:text-[1rem] tracking-[0.14rem] md:tracking-[0.14rem] uppercase whitespace-nowrap transition-opacity duration-200" aria-live="polite">
-							Inhala y exala.
+							Inhala, mantén y exhala.
 						</p>
 					</button>
 				</div>
@@ -221,8 +220,8 @@ import iconInstagram from '../assets/IconInstagram.svg';
 			let currentUIState = 'idle'; 
 			let isChangingText = false;
 
-			const baselineY = 41.8;
-			const peakY = 1.3;
+			const baselineY = 220;
+			const peakY = 6;
 			const length = path.getTotalLength();
 
 			path.style.strokeDasharray = `${length}`;
@@ -237,8 +236,9 @@ import iconInstagram from '../assets/IconInstagram.svg';
 				
 				setTimeout(() => {
 					if (newState === 'inhale') text.innerText = 'Inhala...';
-					else if (newState === 'exhale') text.innerText = 'Exala...';
-					else text.innerText = 'Inhala y exala.';
+					else if (newState === 'exhale') text.innerText = 'Exhala...';
+					else if (newState === 'hold') text.innerText = 'Mantén...';
+					else text.innerText = 'Inhala, mantén y exhala.';
 					
 					text.style.opacity = '1';
 					setTimeout(() => { isChangingText = false; }, 200);
@@ -271,18 +271,16 @@ import iconInstagram from '../assets/IconInstagram.svg';
 
 				const dy = nextPoint.y - currentPoint.y;
 				
-				// Lógica de estado ultra-refinada
+				// Lógica de estado adaptada al nuevo SVG
 				if (dy < -0.1) {
-					setUIState('inhale'); // Subiendo pico
+					setUIState('inhale'); // Subiendo
 				} else if (dy > 0.1) {
-					setUIState('exhale'); // Bajando pico
+					setUIState('exhale'); // Bajando
 				} else {
-					// En zonas planas
-					if (currentDistance < length * 0.15) { 
-						// Parte plana inicial previa al primer pico -> Inhalamos
-						setUIState('inhale');
+					// Zonas planas: Si estamos arriba, mantenemos; si estamos abajo, exhalamos
+					if (currentPoint.y < (baselineY + peakY) / 2) {
+						setUIState('hold');
 					} else {
-						// Zonas planas entre picos y final -> Exhalamos (Esperando nueva subida)
 						setUIState('exhale');
 					}
 				}
@@ -297,7 +295,7 @@ import iconInstagram from '../assets/IconInstagram.svg';
 				path.style.strokeDashoffset = '0';
 				btn?.style.setProperty('transform', 'scale(1)');
 				if (text) {
-					text.innerText = 'Inhala y exala.';
+					text.innerText = 'Inhala, mantén y exhala.';
 					text.style.opacity = '1';
 				}
 				currentUIState = 'idle';
