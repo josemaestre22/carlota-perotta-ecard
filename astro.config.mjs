@@ -13,7 +13,7 @@ export default defineConfig({
       {
         provider: fontProviders.fontsource(),
         name: "Playfair Display",
-        cssVariable: "--astro-font-playfair",
+        cssVariable: "--font-playfair",
         weights: ["400 900"], // Rango variable
         styles: ["normal", "italic"] // Necesitamos itálicas para "entender" y "empezar a transformarlo"
       },
@@ -21,14 +21,14 @@ export default defineConfig({
       {
         provider: fontProviders.fontsource(),
         name: "Inter",
-        cssVariable: "--astro-font-inter",
+        cssVariable: "--font-inter",
         weights: ["100 900"], // Rango variable
       },
 
       {
         provider: fontProviders.fontsource(),
         name: "DM Sans",
-        cssVariable: "--astro-font-dmsans",
+        cssVariable: "--font-dmsans",
         weights: ["100 1000"], // Rango variable
       }
     ]
