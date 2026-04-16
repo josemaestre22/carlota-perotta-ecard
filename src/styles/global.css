@@ -14,9 +14,9 @@
   --color-white: #FFFFFF;
 
   /* Tipografías */
-  --font-playfair: var(--font-playfair), ui-serif, system-ui, serif;
-  --font-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-dmsans: var(--font-dmsans), ui-sans-serif, system-ui, sans-serif;
+  --font-playfair: var(--font-playfair);
+  --font-inter: var(--font-inter);
+  --font-dmsans: var(--font-dmsans);
 
   /* Animaciones */
   --animate-draw-pulse: draw-pulse 8s linear infinite;
